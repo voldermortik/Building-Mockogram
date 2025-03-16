@@ -1,0 +1,28 @@
+meta {
+  name: Create post
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{mockagram_api_url}}/posts/
+  body: json
+  auth: none
+}
+
+headers {
+  Cookie: mockagram_access_token={{mockagram_access_token}}
+}
+
+body:json {
+  {
+    "userId": "insert-user-id-here",
+    "userComment": "Check out this image!",
+    "imageId": "insert-image-id-here"
+  }
+}
+
+vars:pre-request {
+  user-ref-id: {{user-ref._id}}
+  image-ref: {{image-ref}}
+}

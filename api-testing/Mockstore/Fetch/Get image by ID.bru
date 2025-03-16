@@ -1,0 +1,15 @@
+meta {
+  name: Get image by ID
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{mockstore_api_url}}/images/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id: 67c6281cffbf1eef9bb60276
+}

@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+.env
+.env.local
+.env.*.local
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Debug files
+.debug/
+
+# Temporary files
+tmp/
+temp/
+
+# MongoDB data directory (if you're using local MongoDB)
+data/db/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Temporarily, everything in the tests folder
+tests/
+
+# None of the files in the filestore folder (but keep the folder)
+filestore/*

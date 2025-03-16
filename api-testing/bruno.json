@@ -1,0 +1,15 @@
+{
+  "version": "1",
+  "name": "Mockagram",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ],
+  "size": 0.00096893310546875,
+  "filesCount": 8,
+  "presets": {
+    "requestType": "http",
+    "requestUrl": ""
+  }
+}

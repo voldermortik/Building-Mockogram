@@ -1,0 +1,52 @@
+meta {
+  name: Log in user
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{mockagram_api_url}}/users/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username": "jdkilby",
+    "password": "myPassword8*"
+  }
+}
+
+tests {
+  // Store the mockagram_access_token cookie for future requests
+  const cookies = res.headers['set-cookie'];
+  if (cookies) {
+    const mgAccessToken = cookies.find(cookie => cookie.startsWith('mgAccessToken='));
+    if (mgAccessToken) {
+      bru.setEnvVar('mockagram_access_token', mgAccessToken);
+    }
+  }
+}
+
+docs {
+  # Log in user
+  
+  This endpoint accepts either a username or email address in the "username" field.
+  Upon successful authentication, sets a secure HTTP-only cookie named 'mgAccessToken'
+  containing the JWT token and returns the user information.
+  
+  ## Cookie Details
+  - Name: mgAccessToken
+  - HttpOnly: true (not accessible via JavaScript)
+  - Secure: true (only sent over HTTPS)
+  - SameSite: strict (CSRF protection)
+  - Max Age: 5 minutes
+  - Path: /
+  - Domain: localhost
+  
+  ## Response
+  Returns user object with:
+  - _id
+  - username
+  - email
+}

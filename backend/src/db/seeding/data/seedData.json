@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "username": "jdKilby",
+      "email": "jd@mockagram.com",
+      "password": "myPassword8*",
+      "customId": "67c62836a52367e4ff136bd9"
+    },
+    {
+      "username": "ikfan",
+      "email": "ikfan@mockagram.com",
+      "password": "myPassword7&",
+      "customId": "67c62836a52367e4ff136bdb"
+    },
+    {
+      "username": "picturetaker81",
+      "email": "pictaker@mockagram.com",
+      "password": "myPassword5%",
+      "customId": "67c62836a52367e4ff136bdd"
+    }
+  ],
+  "comments": [
+    "How cool is this?",
+    "Check this out!",
+    "Nice!",
+    "Awesome!",
+    "That's what it is all about!"
+  ],
+  "posts": [
+    {
+      "postImageId": "67c6281cffbf1eef9bb60276",
+      "authorUsername": "jdKilby"
+    },
+    {
+      "postImageId": "67c6281cffbf1eef9bb60279",
+      "authorUsername": "jdKilby"
+    },
+    {
+      "postImageId": "67c6281cffbf1eef9bb6027c",
+      "authorUsername": "jdKilby"
+    },
+    {
+      "postImageId": "67c6281cffbf1eef9bb60285",
+      "authorUsername": "jdKilby"
+    },
+    {
+      "postImageId": "67c6281cffbf1eef9bb6027f",
+      "authorUsername": "jdKilby"
+    },
+    {
+      "postImageId": "67c631fb4284a65414db557d",
+      "authorUsername": "ikFan"
+    }
+  ]
+} 

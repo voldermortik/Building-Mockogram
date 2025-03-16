@@ -1,0 +1,59 @@
+meta {
+  name: Log out user
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{mockagram_api_url}}/users/logout
+  body: none
+  auth: none
+}
+
+headers {
+  Cookie: {{mockagram_access_token}}
+}
+
+tests {
+  test("should clear cookie and environment variable", function() {   
+      // Verify response message
+      const body = res.getBody();
+      assert(body.message === 'Successfully logged out', 'Should return success message');
+  
+      // Verify cookie clearing
+      const setCookieHeader = res.headers['set-cookie'][0];
+      
+      assert(setCookieHeader, 'set-cookie header should exist');
+      assert(setCookieHeader.includes('mgAccessToken=;'), 'Cookie should be cleared');
+      assert(setCookieHeader.includes('Expires=Thu, 01 Jan 1970'), 'Cookie should be expired');
+      
+      // Clear the stored cookie from environment
+      bru.setEnvVar('mockagram_access_token', '');
+  });
+}
+
+docs {
+  # Log out user
+  
+  This endpoint clears the authentication cookie, effectively logging out the user.
+  No request body is required.
+  
+  ## Cookie Details
+  The following cookie will be cleared:
+  - Name: mgAccessToken
+  - Path: /
+  - Domain: localhost
+  
+  ## Response
+  Returns a success message:
+  ```json
+  {
+    "message": "Successfully logged out"
+  }
+  ```
+  
+  Note: The endpoint uses the same security settings for clearing the cookie as were used when setting it:
+  - HttpOnly: true
+  - Secure: true
+  - SameSite: strict
+}

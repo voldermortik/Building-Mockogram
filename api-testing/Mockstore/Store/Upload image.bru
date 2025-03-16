@@ -1,0 +1,15 @@
+meta {
+  name: Upload image
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{mockstore_api_url}}/images
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  image: @file(/Users/jdkilby/Desktop/test images/67c39f19bdd3914294b39afd.jpg)
+}

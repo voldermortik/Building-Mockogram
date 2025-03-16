@@ -1,0 +1,15 @@
+meta {
+  name: Get posts by username
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{mockagram_api_url}}/posts/user/:username
+  body: none
+  auth: none
+}
+
+params:path {
+  username: jdkilby
+}
