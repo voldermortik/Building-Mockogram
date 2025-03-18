@@ -48,14 +48,14 @@ Each image "stored" inside Mockstore has a unique ID tied to it. Mockstore can r
 
 **To help you get started, we've already setup image files in the Mockstore with ID's that are referenced by `seedData.json`.** If you'd like to use your own photos, feel free to replace them - just make sure to preserve the file names. A list of the default ID's / filenames is provided below:
 
-|Image ID in `seedData.json`|Filename in Mockstore's `filestore` folder|
-|-|-|
-| `"67c6281cffbf1eef9bb60276"` | 67c6281cffbf1eef9bb60276.jpg |
-| `"67c6281cffbf1eef9bb60279"` | 67c6281cffbf1eef9bb60279.jpg |
-| `"67c6281cffbf1eef9bb6027c"` | 67c6281cffbf1eef9bb6027c.jpg |
-| `"67c6281cffbf1eef9bb60285"` | 67c6281cffbf1eef9bb60285.jpg |
-| `"67c6281cffbf1eef9bb6027f"` | 67c6281cffbf1eef9bb6027f.jpg |
-| `"67c631fb4284a65414db557d"` | 67c631fb4284a65414db557d.jpg |
+| Image ID in `seedData.json`  | Filename in Mockstore's `filestore` folder |
+| ---------------------------- | ------------------------------------------ |
+| `"67c6281cffbf1eef9bb60276"` | 67c6281cffbf1eef9bb60276.jpg               |
+| `"67c6281cffbf1eef9bb60279"` | 67c6281cffbf1eef9bb60279.jpg               |
+| `"67c6281cffbf1eef9bb6027c"` | 67c6281cffbf1eef9bb6027c.jpg               |
+| `"67c6281cffbf1eef9bb60285"` | 67c6281cffbf1eef9bb60285.jpg               |
+| `"67c6281cffbf1eef9bb6027f"` | 67c6281cffbf1eef9bb6027f.jpg               |
+| `"67c631fb4284a65414db557d"` | 67c631fb4284a65414db557d.jpg               |
 
 ## Run Mockagram
 
@@ -82,7 +82,7 @@ First, there is the **start** branch - this is the primary branch and the one wi
 
 Next, there is the **main** branch. This contains the completed project. Before the class, feel free to switch over to this branch to see what the final product will look like - but don't forget to switch back to the **start** branch before the session!
 
-Finally, there are several **checkpoint** branches, such as **checkpoint-1**, **checkpoint-2**, etc. If you are unable to follow along and complete one of the portions of the live coding sessions, we will call out that you can switch to one of these checkpoint branches to get your project in a state where you can continue. Note that we will have everyone switch over when we reach the mid-point at **checkpoint-4** as there is some additional page styling that will make the site look better before we continue. 
+Finally, there are several **checkpoint** branches, such as **checkpoint-1**, **checkpoint-2**, etc. If you are unable to follow along and complete one of the portions of the live coding sessions, we will call out that you can switch to one of these checkpoint branches to get your project in a state where you can continue. Note that we will have everyone switch over to a checkpoint branch mid-way during the session to skip ahead several steps to the final exercise. 
 
 ## Other Setup and Preparation
 
