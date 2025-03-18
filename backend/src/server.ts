@@ -7,7 +7,6 @@ import {
   shutdownDatabase
 } from './db/manageDb';
 
-import userRoutes from '@/routes/usersRoutes';
 import postRoutes from '@/routes/postsRoutes';
 
 // *********************************************************************************  
@@ -24,7 +23,6 @@ app.use(cors({
 
 app.use(cookieParser());
 app.use(express.json());
-app.use(`${env.API_URL}/users`, userRoutes);
 app.use(`${env.API_URL}/posts`, postRoutes);
 
 // *********************************************************************************  
