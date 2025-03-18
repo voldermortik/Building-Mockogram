@@ -26,7 +26,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
           
           if (response.ok) {
             const userData = await response.json() as User;
-            setUser(userData);
+            // TODO: do something with this response!
           }
         } catch (error) {
           console.error('Auth check failed:', error);
@@ -52,8 +52,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
       }
 
       const userData = await response.json() as User;
-      setUser(userData);
-      return userData;
+      // TODO: do something with this response!
     } catch (error) {
       console.error('Login failed:', error);
       throw error;
@@ -71,7 +70,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         throw new Error('Logout failed');
       }
 
-      setUser(null);
+      // TODO: do something with this response!
     } catch (error) {
       console.error('Logout failed:', error);
       throw error;
