@@ -1,10 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { NavButton } from '@/components/buttons/NavButton';
-import { Image } from '@/data/Image';
 import { SubmitButton } from '@/components/buttons/SubmitButton';
-import { env } from '@/config/env';
 interface FieldError {
   message: string;
   timestamp: number;
@@ -12,7 +9,6 @@ interface FieldError {
 
 export function CreatePostPage() {
   const { user } = useAuth();
-  const navigate = useNavigate();
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -87,47 +83,7 @@ export function CreatePostPage() {
     setSubmitError(null);
 
     try {
-      if (!user) {
-        throw new Error('User must be logged in');
-      }
-
-      const formData = new FormData();
-      
-      if (!selectedFile) {
-        throw new Error('No file selected');
-      }
-      formData.append('image', selectedFile);
-
-      const imageResponse = await fetch(`${env.VITE_MOCKSTORE_API_URL}/images`, {
-        method: 'POST',
-        body: formData,
-      });
-
-      if (!imageResponse.ok) {
-        throw new Error('Failed to upload image');
-      }
-
-      const imageData = await imageResponse.json() as Image;
-      
-      const postResponse = await fetch(`${env.VITE_MOCKAGRAM_API_URL}/posts`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        credentials: 'include',
-        body: JSON.stringify({
-          userId: user._id,
-          userComment: description,
-          imageId: imageData.imageId,
-        }),
-      });
-
-      if (!postResponse.ok) {
-        throw new Error('Failed to create post');
-      }
-
-      void navigate(`/profile/${user.username}`);
-
+      setSubmitError('Not yet implemented!');
     } catch (error) {
       setSubmitError(
         error instanceof Error 
