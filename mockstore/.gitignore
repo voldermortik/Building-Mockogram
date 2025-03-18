@@ -58,6 +58,3 @@ Thumbs.db
 
 # Temporarily, everything in the tests folder
 tests/
-
-# None of the files in the filestore folder (but keep the folder)
-filestore/*
